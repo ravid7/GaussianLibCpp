@@ -1,4 +1,5 @@
 #include "kmeans.h"
+#include <math.h>
 
 int main(int argc, char const *argv[])
 {
@@ -7,7 +8,10 @@ int main(int argc, char const *argv[])
         return 1;
     }
     KMeans kmeans(argv[1]);    
-    kmeans.show();
     Shape shape = kmeans.shape();
     cout<<shape.width<<" "<<shape.height<<endl;
+    // kmeans.Shred();
+    // shape = kmeans.shape();
+    // cout<<shape.width<<" "<<shape.height<<endl;
+    kmeans.show();
 }
