@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/Means.dir/src/main.cpp.o CMakeFiles/Means.dir/src/kmeans.cpp.o  -o Means  /usr/lib/libopencv_highgui.so.4.3.0 /usr/lib/libopencv_videoio.so.4.3.0 /usr/lib/libopencv_imgcodecs.so.4.3.0 /usr/lib/libopencv_imgproc.so.4.3.0 /usr/lib/libopencv_core.so.4.3.0 

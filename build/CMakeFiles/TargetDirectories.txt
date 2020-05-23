@@ -1,3 +1,0 @@
-/home/rathore/Garbage/meansWhat/build/CMakeFiles/rebuild_cache.dir
-/home/rathore/Garbage/meansWhat/build/CMakeFiles/edit_cache.dir
-/home/rathore/Garbage/meansWhat/build/CMakeFiles/Means.dir
