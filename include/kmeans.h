@@ -11,14 +11,17 @@ struct Shape{
     int height;
 };
 
+
 class KMeans{
 
 private:
     bool success;
     cv::Mat image;
+    enum SHRINK_INTENSITY { MILD = 4, AVERAGE = 8, AGGRESSIVE = 16};
+    void Compress(int INTENSITY);
 public:
     Shape shape();
     KMeans(const char*);
     void show();
-    void Shred();
+    void Compress();
 };

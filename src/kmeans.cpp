@@ -24,26 +24,30 @@ Shape KMeans::shape(){
     return {size.width, size.height};
 }
 
-void KMeans::Shred(){
+void KMeans::Compress(){
+    Compress(AGGRESSIVE);
+}
+
+void KMeans::Compress(int intensity){
     if(!success){
+        std::cout<<"Invalid file"<<std::endl;
         return;
     }
     Shape shape = this->shape();
     double height = shape.height;
     double width = shape.width;
     double x = height / 100;
+    int flr;
     if(height > 1000){
-        int flr = ceil(x/5);
+        flr = ceil(x/5);
         height /= flr;
         width /= flr;
     }
     else if(height > 300){
-        int flr = ceil(x/2.5);
+        flr = ceil(x/2.5);
         height /= flr;
         width /= flr;
     }
-    height /= shape.height;
-    width /= shape.width;
-    cv::Mat target;
-    cv::resize(image, target, cv::Size(), shape.height, shape.width);
+    flr *= 1 + (intensity/10);
+    cv::resize(image, image, cv::Size(shape.width/flr, shape.height/flr), 0, 0, cv::INTER_AREA);
 }

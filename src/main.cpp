@@ -10,8 +10,8 @@ int main(int argc, char const *argv[])
     KMeans kmeans(argv[1]);    
     Shape shape = kmeans.shape();
     cout<<shape.width<<" "<<shape.height<<endl;
-    // kmeans.Shred();
-    // shape = kmeans.shape();
-    // cout<<shape.width<<" "<<shape.height<<endl;
+    kmeans.Compress();
+    shape = kmeans.shape();
+    cout<<shape.width<<" "<<shape.height<<endl;
     kmeans.show();
 }
