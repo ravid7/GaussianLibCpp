@@ -9,3 +9,11 @@
 # How to Run.
 
 > ./Main ../test/wall.jpg
+
+# For lint 
+
+> Cntrl + Shift + P 
+
+> type Edit configuration
+
+> inside configurations>includePath type "/usr/include/opencv4" for OpenCV 4.

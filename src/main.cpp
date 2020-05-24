@@ -8,10 +8,10 @@ int main(int argc, char const *argv[])
         return 1;
     }
     KMeans kmeans(argv[1]);    
-    Shape shape = kmeans.shape();
-    cout<<shape.width<<" "<<shape.height<<endl;
     kmeans.Compress();
-    shape = kmeans.shape();
-    cout<<shape.width<<" "<<shape.height<<endl;
+    vector<color> container =  kmeans.extractColors();
+    for(int i = 0; i < container.size(); i++){
+        cout<<container[i].getHexStr()<<endl;
+    }
     kmeans.show();
 }
