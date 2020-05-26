@@ -12,7 +12,7 @@
 
 # For lint 
 
-> Cntrl + Shift + P 
+> Ctrl + Shift + P 
 
 > type Edit configuration
 

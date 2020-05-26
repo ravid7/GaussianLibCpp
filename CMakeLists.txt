@@ -12,9 +12,13 @@ FIND_PACKAGE(OpenCV REQUIRED core imgcodecs highgui)
 
 set(SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
-set(NAME_SRC ${SOURCE}/main.cpp ${SOURCE}/kmeans.cpp)
+file(GLOB NAME_SRC "${SOURCE}/*.cpp")
 
-set(NAME_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/include/kmeans.h)
+file(GLOB NAME_HEADERS "${CMAKE_CURRENT_SOURCE_DIR}/include/*.h")
+
+foreach (_variableName ${NAME_HEADERS})
+        message(STATUS "${_variableName}")
+    endforeach()
 
 add_executable(Means ${NAME_SRC} ${NAME_HEADERS})
 
